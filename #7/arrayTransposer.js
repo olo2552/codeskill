@@ -14,5 +14,5 @@ const afterRotation = beforeRotation[0].map( (column, index) => {
 }).join(`\n`);
 
 console.log(afterRotation);
-// MARK AS NOT FINISHED!
-// TODO: when have some time add an implementation using generators
+
+
