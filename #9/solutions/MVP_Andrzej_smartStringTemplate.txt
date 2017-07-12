@@ -1,0 +1,21 @@
+ZADANIE 2.
+`var template = '${imie} ${nazwisko} ${z.wiek} ma kota'
+
+function parseTemplate(template, map, fallback) {
+
+ return template.replace(/\$\{[^}]+\}/g, (match) =>  
+   match
+     .slice(2, -1)
+     .trim()
+     .split(".")
+     .reduce(
+       (searchObject, key) => {
+         if (searchObject.hasOwnProperty(key)) {
+           return searchObject[key];
+         }
+         return (fallback === null || fallback === undefined) ? fallback : match;
+       },
+       map
+     )  
+ );  
+}`
